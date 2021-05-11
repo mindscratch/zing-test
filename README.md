@@ -2,6 +2,30 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.0.5.
 
+## NOTES
+
+Using Node v15.4.0 and NPM 7.0.15. Inside the project, `rm -rf node_modules/*` (if it exists).
+
+Install dependencies...
+
+```
+npm install
+npm install zingchart --save --legacy-peer-deps
+npm install zingchart-angular --save --legacy-peer-deps
+ng serve
+```
+
+Observe the following error:
+
+```
+    
+    Error: node_modules/zingchart-angular/lib/zingchart-angular.component.d.ts:3:23 - error TS7016: Could not find a declaration file for module 'zingchart/es6'. '/Users/craig/dev/zing-test/node_modules/zingchart/es6.js' implicitly has an 'any' type.
+      Try `npm install @types/zingchart` if it exists or add a new declaration (.d.ts) file containing `declare module 'zingchart/es6';`
+    
+    3 import zingchart from 'zingchart/es6';
+                            ~~~~~~~~~~~~~~~
+```
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
